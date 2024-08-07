@@ -15,16 +15,58 @@
                 <div class="line-top"></div>
                 <div class="line-bottem"></div>
             </div>
-            <div class="menu">
-                <ul>
-                    <li>HOME</li>
-                    <li>WORK</li>
-                    <li>LIFE</li>
-                    <li>SPRIT</li>
-                </ul>
-            </div>
+            <ul class="menu">
+                <li>HOME</li>
+                <li>WORK</li>
+                <li>LIFE</li>
+                <li>SPRIT</li>
+            </ul>
         </div>
     </div>
 </body>
+<script>
+    const content = document.querySelector(".content");
+    const menu = document.querySelector(".menu");
+    const lineTop = document.querySelector(".line-top");
+    const lineBottem = document.querySelector(".line-bottem");
+    const menuItems = document.querySelector(".menu");
+
+    content.addEventListener("click", (event) => {
+        content.style.zIndex = "0";
+        lineTop.classList.remove("activeLines");
+        lineBottem.classList.remove("activeLines");
+        content.classList.remove("activeLineGap");
+        menu.classList.remove("activeOpacity");
+
+        content.classList.remove("closeLineGap");
+        lineTop.classList.remove("CloseLine");
+        lineBottem.classList.remove("CloseLine");
+
+        lineTop.classList.add("activeLines");
+        lineBottem.classList.add("activeLines");
+        content.classList.add("activeLineGap");
+        menu.classList.add("activeOpacity");
+        // menu.classList.add("opacityMenu");
+        
+
+    });
+    menuItems.addEventListener("click", (event) => {
+        content.style.zIndex = "2";
+        content.classList.remove("activeLineGap");
+        lineTop.classList.remove("activeLines");
+        lineBottem.classList.remove("activeLines");
+        menu.classList.remove("activeOpacity");
+
+        content.classList.remove("closeLineGap");
+        lineTop.classList.remove("CloseLine");
+        lineBottem.classList.remove("CloseLine");
+
+        content.classList.add("closeLineGap");
+        lineTop.classList.add("CloseLine");
+        lineBottem.classList.add("CloseLine");
+       
+    });
+
+</script>
 
 </html>
