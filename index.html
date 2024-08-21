@@ -41,14 +41,15 @@
         content.classList.remove("closeLineGap");
         lineTop.classList.remove("CloseLine");
         lineBottem.classList.remove("CloseLine");
+        menu.classList.remove("opacityMenu");
 
         lineTop.classList.add("activeLines");
         lineBottem.classList.add("activeLines");
         content.classList.add("activeLineGap");
         menu.classList.add("activeOpacity");
-        // menu.classList.add("opacityMenu");
-        
-
+        setTimeout(() => {
+            menu.classList.add("opacityMenu");
+        }, 1000);
     });
     menuItems.addEventListener("click", (event) => {
         content.style.zIndex = "2";
@@ -60,11 +61,11 @@
         content.classList.remove("closeLineGap");
         lineTop.classList.remove("CloseLine");
         lineBottem.classList.remove("CloseLine");
+        menu.classList.remove("opacityMenu");
 
         content.classList.add("closeLineGap");
         lineTop.classList.add("CloseLine");
         lineBottem.classList.add("CloseLine");
-       
     });
 
 </script>
