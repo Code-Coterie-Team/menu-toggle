@@ -53,14 +53,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: whitesmoke;
-   
+
 }
 
 .activeLineGap {
     gap: 40px;
     animation: lineGap 2s ease;
 }
-.closeLineGap{
+
+.closeLineGap {
     gap: 20px;
     animation: closelineGap 2s ease;
 }
@@ -70,23 +71,27 @@
     height: 2px;
     animation: widthLine 2s ease;
 }
-.CloseLine{
+
+.CloseLine {
     animation: closeWidthLine 2s ease;
 }
+
 .activeOpacity {
     animation-name: opacityMenu;
     animation-duration: 1s;
-    animation-delay:1s ;
+    animation-delay: 1s;
     animation-timing-function: ease;
-    /* opacity: 1; */
 }
-.opacityMenu{
-opacity: 1;
+
+.opacityMenu {
+    opacity: 1;
 }
+
 .menu li:hover {
     opacity: 0.8;
     cursor: pointer;
 }
+
 @keyframes widthLine {
     0% {
         width: 0px;
@@ -106,6 +111,7 @@ opacity: 1;
         gap: 40px;
     }
 }
+
 @keyframes closelineGap {
     0% {
         gap: 40px;
@@ -127,10 +133,12 @@ opacity: 1;
         height: 2px;
     }
 }
+
 @keyframes opacityMenu {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
